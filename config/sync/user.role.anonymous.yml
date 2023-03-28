@@ -1,0 +1,14 @@
+uuid: f5585ffd-4c69-404f-87bf-838784bcec2a
+langcode: hu
+status: true
+dependencies:
+  module:
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Névtelen felhasználó'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'

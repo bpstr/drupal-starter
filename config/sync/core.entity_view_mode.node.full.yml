@@ -1,0 +1,12 @@
+uuid: 728048ce-0e96-4b7b-a154-598cb702b096
+langcode: hu
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
+id: node.full
+label: 'Teljes tartalom'
+targetEntityType: node
+cache: true

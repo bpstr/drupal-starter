@@ -1,0 +1,10 @@
+uuid: facc820d-13a6-415b-9c0d-dabfa3f4c966
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7klS5IWXrwzVaPpYZFAs6wcx8U2FF1X73OfrtTsvuvE
+id: fallback
+label: 'Pót dátumformátum'
+locked: true
+pattern: 'D, m/d/Y - H:i'
