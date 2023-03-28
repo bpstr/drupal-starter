@@ -1,0 +1,16 @@
+uuid: 8e2aa227-9ca2-46a6-a3e0-17c2172e1f62
+langcode: hu
+status: true
+dependencies:
+  module:
+    - gutenberg
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: 6Nffs0f0augGItO21H-DDIcPxIBbB5txCgVuY_3xY8k
+id: reusable_block_delete_action
+label: 'Újrafelhasználható blokk törlése'
+type: block_content
+plugin: reusable_block_delete_action
+configuration: {  }

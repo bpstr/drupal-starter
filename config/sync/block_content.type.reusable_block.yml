@@ -1,0 +1,13 @@
+uuid: 7ee5d3bf-5d3d-47ba-9147-fcb277ed4af9
+langcode: hu
+status: true
+dependencies:
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: r3t6MLUWkQk97pf7x3OiHCBZanFJKsKLS3uuQbmw-Yo
+id: reusable_block
+label: 'Reusable block'
+revision: 0
+description: 'Saját blokkot készítve a Gutenberg szerkesztővel az bárhol újra felhasználható lesz!'
