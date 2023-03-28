@@ -30,3 +30,5 @@ web/sites/simpletest
 
 # Ignore multi-site test environment.
 # simpletest
+/.editorconfig
+/.gitattributes
