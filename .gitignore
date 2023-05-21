@@ -2,7 +2,8 @@
 .DS_Store
 
 # Ignore configuration files that may contain sensitive information
-/web/sites/*/*settings*.php
+/web/sites/*/*settings.*.php
+!/web/sites/*/*settings.local.php
 /web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
@@ -20,8 +21,9 @@
 # Ignore drupal core (if not versioning drupal sources)
 /web/vendor
 /web/core
-/web/modules/README.txt
-/web/profiles/README.txt
+/web/modules/contrib/*
+!/web/modules/contrib/.gitkeep
+/web/profiles/contrib
 /web/sites/development.services.yml
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
