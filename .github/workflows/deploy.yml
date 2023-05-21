@@ -16,10 +16,10 @@ jobs:
       - name: SSH Commands
         uses: cross-the-world/ssh-pipeline@master
         with:
-          host: ${{ secrets.ADMIN_IP }}
-          user: ${{ secrets.ADMIN_USERNAME }}
-          pass: ${{ secrets.ADMIN_PASS }}
-          port: ${{ secrets.ADMIN_PORT }}
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          pass: ${{ secrets.DEPLOY_PASS }}
+          port: ${{ secrets.DEPLOY_PORT }}
           script: |
             cd ~/DRUPAL-STARTER
             git fetch
