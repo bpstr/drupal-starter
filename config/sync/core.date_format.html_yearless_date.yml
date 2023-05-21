@@ -1,0 +1,10 @@
+uuid: a6f47d6d-9478-4203-98f2-ba0196a99514
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5VpawMrKPEPCkoO4YpPa0TDFO2dgiIHfTziJtwlmUxc
+id: html_yearless_date
+label: 'HTML dátum évszám nélkül'
+locked: true
+pattern: m-d

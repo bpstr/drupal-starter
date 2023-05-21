@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: hu
+uuid: fa69f915-30fa-4eda-9f9e-d0fe2672edd3
+name: 'Drupal Starter'
+mail: info@drupal.starter
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: hu

@@ -1,0 +1,13 @@
+uuid: e986d35d-f5a7-4aa4-a885-648912f60a86
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: LhdsoZPL_pFas2fjaAWue4zvrQ_tEVofLYtcNec-JGM
+id: node_save_action
+label: 'Tartalom mentése'
+type: node
+plugin: 'entity:save_action:node'
+configuration: {  }

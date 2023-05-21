@@ -1,0 +1,16 @@
+uuid: d6b6712e-b03f-4897-9b13-7306585d035d
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Névtelen felhasználó'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'
