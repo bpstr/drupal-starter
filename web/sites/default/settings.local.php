@@ -17,7 +17,7 @@
  */
 
 $databases['default']['default'] = [
-  'database' => 'linkmaxhu',
+  'database' => 'examplecom',
   'username' => 'root',
   'password' => '',
   'host' => '127.0.0.1',
@@ -28,7 +28,7 @@ $databases['default']['default'] = [
 ];
 
 $settings['trusted_host_patterns'] = [
-  '^linkmax\.localhost$',
+  '^example\.localhost$',
 ];
 
 /**
