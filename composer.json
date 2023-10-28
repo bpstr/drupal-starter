@@ -24,6 +24,7 @@
         "drupal/pathauto": "^1.11",
         "drupal/schema_ui": "^1.0",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/zircon": "10.1.x-dev@dev",
         "drush/drush": "^11.5"
     },
     "conflict": {

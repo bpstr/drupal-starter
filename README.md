@@ -11,6 +11,8 @@
 composer install
 drush si --existing-config
 drush uli
+drush cron
+drush cr
 ```
 
 
