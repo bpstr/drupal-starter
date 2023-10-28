@@ -17,7 +17,7 @@
  */
 
 $databases['default']['default'] = [
-  'database' => 'drupalstarter',
+  'database' => 'linkmaxhu',
   'username' => 'root',
   'password' => '',
   'host' => '127.0.0.1',
@@ -28,7 +28,7 @@ $databases['default']['default'] = [
 ];
 
 $settings['trusted_host_patterns'] = [
-  '^drupal\.starter$',
+  '^linkmax\.localhost$',
 ];
 
 /**
