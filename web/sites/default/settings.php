@@ -238,6 +238,25 @@ $databases = [];
 $settings['config_sync_directory'] = '../config/sync';
 
 /**
+ * Sets the directory path for storing exported content entities.
+ *
+ * The $settings['content_sync_directory'] configuration option specifies
+ * the directory where the exported content entities will be stored as YAML
+ * files during the export process. The value '../content/sync' represents a
+ * relative path to the desired directory. In this case, it suggests that the
+ * 'content' directory is located in the parent directory of the Drupal
+ * installation, and within it, there is a 'sync' directory.
+ *
+ * Make sure that the specified directory is writable by the web server or the
+ * Drupal application, allowing the Drupal Content Entity Sync module to
+ * successfully write the exported YAML files to the specified directory during
+ * the export process.
+ *
+ * Example: $settings['content_sync_directory'] = '../content/sync';
+ */
+$settings['content_sync_directory'] = '../content/sync';
+
+/**
  * Settings:
  *
  * $settings contains environment-specific configuration, such as the files
