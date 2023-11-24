@@ -1,0 +1,25 @@
+<?php
+
+require_once __DIR__ . '/initial.theme.php';
+
+/**
+ * Implements HOOK_page_attachments_alter().
+ */
+function initial_page_attachments_alter(array &$page) {
+  $page['#attached']['library'][] = 'initial/global-styling';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function initial_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+
+    /** @var \Drupal\block_content\BlockContentInterface $content */
+    $content = $variables['elements']['content']['#block_content'];
+
+    $suggestions[] = 'block__block_content__' . $content->bundle();
+  }
+}
+
+

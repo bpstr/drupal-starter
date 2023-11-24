@@ -1,0 +1,4 @@
+services:
+  initial.service_provider:
+    class: Drupal\initial\InitialServiceProvider
+    arguments: ['@entity_type.manager']
