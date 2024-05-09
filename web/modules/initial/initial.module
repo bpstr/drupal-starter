@@ -22,4 +22,18 @@ function initial_theme_suggestions_block_alter(array &$suggestions, array $varia
   }
 }
 
+/**
+ * Implements hook_form_alter().
+ */
+function initial_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form = [
+    'meta' => [
+      '#type' => 'inline_template',
+      '#template' => '<!-- FORM ID: ' . $form_id . ' -->',
+      '#context' => [
+        'form_id' => $form_id,
+      ],
+    ],
+  ] + $form;
+}
 
