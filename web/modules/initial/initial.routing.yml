@@ -1,0 +1,7 @@
+initial.homepage:
+  path: '/'
+  defaults:
+    _title: 'Homepage'
+    _controller: '\Drupal\initial\Controller\HomepageController'
+  requirements:
+    _permission: 'access content'
