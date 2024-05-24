@@ -22,3 +22,12 @@ drush cr
 ### Detailed nginx configuration for local development
 
 todo.
+
+### Export translations
+
+Create translations folder first: `mkdir interface && mkdir interface/translations`
+
+```bash
+drush locale:export hu > interface/translations/hu.po
+drush locale:export hu --template > interface/translations/hu.pot
+```
