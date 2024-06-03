@@ -23,11 +23,19 @@ drush cr
 
 todo.
 
-### Export translations
+### Translations management
 
 Create translations folder first: `mkdir interface && mkdir interface/translations`
+
+**Export translations**
 
 ```bash
 drush locale:export hu > interface/translations/hu.po
 drush locale:export hu --template > interface/translations/hu.pot
+```
+
+**Import translations**
+
+```bash
+drush locale:import-all /var/www/html/interface/translations
 ```
