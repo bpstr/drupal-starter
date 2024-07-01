@@ -23,6 +23,19 @@ drush cr
 
 todo.
 
+
+### Database management
+
+Download from production:
+```
+drush sql:dump --database=default --structure-tables-list=cache,cache_* > database/prod.sql
+```
+Import SQL file after download
+```
+drush sql:drop && drush sqlc < database/prod.sql
+```
+
+
 ### Translations management
 
 Create translations folder first: `mkdir interface && mkdir interface/translations`
