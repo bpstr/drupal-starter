@@ -27,6 +27,7 @@
         "drupal/pathauto": "^1",
         "drupal/schema_ui": "^1",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/views_negate": "^2",
         "drush/drush": "^12"
     },
     "conflict": {
