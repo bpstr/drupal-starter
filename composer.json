@@ -20,11 +20,14 @@
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",
         "drupal/core-recommended": "^10",
+        "drupal/eva": "^3.1",
         "drupal/field_group": "^3.4",
         "drupal/focal_point": "^2",
         "drupal/gtm": "^1",
         "drupal/metatag": "^1",
         "drupal/pathauto": "^1",
+        "drupal/phpmailer_smtp": "^2.2",
+        "drupal/queue_mail": "^1.6",
         "drupal/schema_ui": "^1",
         "drupal/simple_sitemap": "^4.1",
         "drupal/views_negate": "^2",
@@ -33,7 +36,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
