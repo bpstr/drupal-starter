@@ -60,7 +60,8 @@
             }
         },
        "patches": {
-            "patches-file": "composer.patches.json"
+          "drupal/core": {
+          }
         },
         "merge-plugin": {
             "include": [
