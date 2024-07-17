@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "~2.0",
         "drupal/content_entity_sync": "^2",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",
@@ -53,6 +54,9 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+       "composer-patches": {
+            "patches-file": "composer.patches.json"
         },
         "installer-paths": {
             "web/core": [
