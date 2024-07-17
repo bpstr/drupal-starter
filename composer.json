@@ -32,7 +32,8 @@
         "drupal/schema_ui": "^1",
         "drupal/simple_sitemap": "^4.1",
         "drupal/views_negate": "^2",
-        "drush/drush": "^12"
+        "drush/drush": "^12",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -57,6 +58,11 @@
         },
        "composer-patches": {
             "patches-file": "composer.patches.json"
+        },
+        "merge-plugin": {
+            "include": [
+          
+            ]
         },
         "installer-paths": {
             "web/core": [
