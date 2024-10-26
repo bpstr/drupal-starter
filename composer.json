@@ -32,6 +32,7 @@
         "drupal/queue_mail": "^1.6",
         "drupal/schema_ui": "^1",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/toolbar_route": "^1.0",
         "drupal/views_negate": "^2",
         "drush/drush": "^12",
         "wikimedia/composer-merge-plugin": "^2.1"
