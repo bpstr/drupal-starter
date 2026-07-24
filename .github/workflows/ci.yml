@@ -42,9 +42,15 @@ jobs:
         run: composer audit
 
       - name: Check custom PHP syntax
-        run: >-
-          find web/modules web/themes
-          -type f -name '*.php'
-          -not -path '*/contrib/*'
-          -print0
-          | xargs -0 -r -n1 php -l
+        shell: bash
+        run: |
+          set -euo pipefail
+          paths=(web/modules)
+          if [[ -d web/themes ]]; then
+            paths+=(web/themes)
+          fi
+          find "${paths[@]}" \
+            -type f -name '*.php' \
+            -not -path '*/contrib/*' \
+            -print0 \
+            | xargs -0 -r -n1 php -l
