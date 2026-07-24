@@ -1,0 +1,29 @@
+<?php
+
+declare(strict_types=1);
+
+$databases['default']['default'] = [
+  'database' => 'drupal_starter',
+  'username' => 'drupal',
+  'password' => 'drupal',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+];
+
+$settings['hash_salt'] = 'replace-with-a-random-local-value';
+$settings['trusted_host_patterns'] = [
+  '^drupal\\.localhost$',
+  '^localhost$',
+];
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/local.services.yml';
+
+$config['system.logging']['error_level'] = 'verbose';
+$config['system.performance']['css']['preprocess'] = false;
+$config['system.performance']['js']['preprocess'] = false;
+
+$settings['rebuild_access'] = true;
+$settings['skip_permissions_hardening'] = true;
