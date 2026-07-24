@@ -1,41 +1,25 @@
 <?php
 
-use Drupal\Core\Form\FormStateInterface;
+declare(strict_types=1);
 
 require_once __DIR__ . '/initial.theme.php';
 
 /**
- * Implements HOOK_page_attachments_alter().
+ * Implements hook_page_attachments_alter().
  */
-function initial_page_attachments_alter(array &$page) {
-  $page['#attached']['library'][] = 'initial/global-styling';
+function initial_page_attachments_alter(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'initial/global-styling';
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
+ * Implements hook_theme_suggestions_block_alter().
  */
-function initial_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
-  if (isset($variables['elements']['content']['#block_content'])) {
-
-    /** @var \Drupal\block_content\BlockContentInterface $content */
-    $content = $variables['elements']['content']['#block_content'];
-
-    $suggestions[] = 'block__block_content__' . $content->bundle();
+function initial_theme_suggestions_block_alter(array &$suggestions, array $variables): void {
+  if (!isset($variables['elements']['content']['#block_content'])) {
+    return;
   }
-}
 
-/**
- * Implements hook_form_alter().
- */
-function initial_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form = [
-    'meta' => [
-      '#type' => 'inline_template',
-      '#template' => '<!-- FORM ID: ' . $form_id . ' -->',
-      '#context' => [
-        'form_id' => $form_id,
-      ],
-    ],
-  ] + $form;
+  /** @var \Drupal\block_content\BlockContentInterface $content */
+  $content = $variables['elements']['content']['#block_content'];
+  $suggestions[] = 'block__block_content__' . $content->bundle();
 }
-
