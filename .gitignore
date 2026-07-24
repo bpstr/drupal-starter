@@ -1,32 +1,32 @@
-.idea
+.idea/
+.vscode/
 .DS_Store
+.env
+.env.*
+!.env.example
 
-# Ignore configuration files that may contain sensitive information
-/web/sites/*/*settings.*.php
-/web/sites/*/*services*.yml
+/vendor/
+/composer.phar
+/composer
+/drush.phar
 
-# Ignore paths that may contain user-generated content
-/web/sites/*/files
-/web/sites/*/public
-/web/sites/*/private
-/web/sites/*/files-public
-/web/sites/*/files-private
-
-# Ignore paths that may contain temporary files
-/web/sites/*/translations
-/web/sites/*/tmp
-/web/sites/*/cache
-
-# Ignore drupal core (if not versioning drupal sources)
-/web/vendor
-/web/core
+/web/core/
+/web/libraries/
 /web/modules/contrib/*
 !/web/modules/contrib/.gitkeep
+/web/profiles/contrib/*
+!/web/profiles/contrib/.gitkeep
 /web/themes/contrib/*
 !/web/themes/contrib/.gitkeep
-/web/profiles/contrib
-!/web/profiles/contrib/.gitkeep
-!/web/sites/development.services.yml
+
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/translations/
+/web/sites/*/tmp/
+/web/sites/*/settings.local.php
+/web/sites/*/settings.prod.php
+/web/sites/*/services.local.yml
+
 /web/.csslintrc
 /web/.editorconfig
 /web/.eslintignore
@@ -46,15 +46,5 @@
 /web/update.php
 /web/web.config
 
-# Ignore vendor dependencies and scripts
-/vendor
-/composer.phar
-/composer
-/robo.phar
-/robo
-/drush.phar
-/drupal.phar
-/drupal
-
-/.editorconfig
-/.gitattributes
+/database/*.sql
+/database/*.sql.gz
