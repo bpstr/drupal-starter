@@ -123,11 +123,11 @@ The remote checkout must be on `main`, have Composer available on `PATH`, and al
 .github/                 CI, deployment, and dependency automation
 config/sync/             Exported Drupal configuration
 content/sync/            Content Entity Sync data
- database/                Local database dump directory
- drush/                   Drush configuration
- web/                     Public document root
- web/modules/initial/     Project-specific custom module
- web/sites/default/       Shared and environment-specific settings
+database/                Local database dump directory
+drush/                   Drush configuration
+web/                     Public document root
+web/modules/initial/     Project-specific custom module
+web/sites/default/       Shared and environment-specific settings
 ```
 
 ## Security notes
