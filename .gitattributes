@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+*.php text diff=php
+*.yml text
+*.yaml text
+*.json text
+*.md text
+
+/database/*.sql linguist-generated=true
