@@ -1,31 +1,44 @@
 name: Deploy Drupal
+
 on:
-
-  # Runs on push to branch "main"
-  push:
-    branches: [  ]
-
-  # Runs when manually triggered in "Actions" tab
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    name: SSH Deploy
+    name: Deploy production
     runs-on: ubuntu-latest
+    environment: production
+
     steps:
-      - name: SSH Commands
-        uses: cross-the-world/ssh-pipeline@master
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          user: ${{ secrets.DEPLOY_USER }}
-          pass: ${{ secrets.DEPLOY_PASS }}
-          port: ${{ secrets.DEPLOY_PORT }}
-          script: |
-            cd ~/DRUPAL-STARTER
-            git fetch
-            git pull
-            ~/bin/composer install
-            ~/bin/drush cr
-            ~/bin/drush updb -y
-            ~/bin/drush cim -y
-            ~/bin/drush cr
+      - name: Configure SSH
+        env:
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Run deployment
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          ssh -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" \
+            "cd '$DEPLOY_PATH' && \
+             git pull --ff-only origin main && \
+             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader && \
+             vendor/bin/drush deploy -y"
